@@ -13,7 +13,7 @@ exports.get_cars = (req: typeof Request, res: typeof Response) => {
         message: "Error: Server error",
       });
     } else {
-      res.send({
+      res(200).send({
         success: true,
         message: "Loaded cars",
         cars: data,
