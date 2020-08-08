@@ -26,7 +26,7 @@ exports.get_car = (req: typeof Request, res: typeof Response) => {
   const id = req.params.id;
   console.log("request received, fetching car");
   let car = {};
-  let dbParams: typeof AWS.DynamoDB.GetItemInput = {
+  const dbParams: typeof AWS.DynamoDB.GetItemInput = {
     TableName: "CarFleet",
     Key: {
       id: {
@@ -49,7 +49,7 @@ exports.get_car = (req: typeof Request, res: typeof Response) => {
 exports.delete_car = (req: typeof Request, res: typeof Response) => {
   const carId = req.params.id;
   console.log("request received, deleting car...", carId);
-  let dbParams: typeof AWS.DynamoDB.GetItemInput = {
+  const dbParams: typeof AWS.DynamoDB.GetItemInput = {
     TableName: "CarFleet",
     Key: {
       id: {
