@@ -5,6 +5,7 @@
   "main": "handler.js",
   "scripts": {
     "test": "ts-node ./src/app.ts",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "deploy": "serverless deploy"
   },
   "dependencies": {
